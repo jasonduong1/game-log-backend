@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get "/games" => "games#index"
   get "/games/:id" => "games#show"
   get "/libraries" => "libraries#index"
+  get "/libraries/:id" => "libraries#show"
 end
