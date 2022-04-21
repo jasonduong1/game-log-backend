@@ -1,13 +1,13 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA2NTM4MDR9.1PP7qTMAZWBfD9ZNIwj41k-v2WIQTSRK6jLqPJ65iPo
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTA2NTgzOTN9.EQHUjE8GEol9rmn8vihEhpFxRdL3nKMcHrCKPlCIkVM
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "user_name": "testuser",
-  "email": "test@test.com",
+  "name": "amanda",
+  "user_name": "useramanda",
+  "email": "amanda@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -16,7 +16,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "amanda@test.com",
   "password": "password"
 }
 ### Libraries index
@@ -30,11 +30,11 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "game_id": "Test title",
+  "game_id": "13",
   "rating": "9"
 }
 ### Libraries update
-PATCH http://localhost:3000/libraries/2
+PATCH http://localhost:3000/libraries/5
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
@@ -42,5 +42,9 @@ Content-Type: application/json
  "rating": "6"
 }
 ### Posts destroy
-DELETE http://localhost:3000/libraries/4
+DELETE http://localhost:3000/libraries/5
 Authorization: Bearer {{jwt}}
+### Games index
+GET http://localhost:3000/games
+### Games show
+GET http://localhost:3000/games/1
