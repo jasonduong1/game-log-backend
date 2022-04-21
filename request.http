@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTAxNDE5MTN9.1pWRuVnuVsLs_zSF60nG_nZ4uCSM_iUktOrDEnOlkYo
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA2NTM4MDR9.1PP7qTMAZWBfD9ZNIwj41k-v2WIQTSRK6jLqPJ65iPo
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -19,3 +19,28 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+### Libraries index
+GET http://localhost:3000/libraries
+### Libraries show
+GET http://localhost:3000/libraries/1
+
+###Libraries create
+POST http://localhost:3000/libraries
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "game_id": "Test title",
+  "rating": "9"
+}
+### Libraries update
+PATCH http://localhost:3000/libraries/2
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+ "rating": "6"
+}
+### Posts destroy
+DELETE http://localhost:3000/libraries/4
+Authorization: Bearer {{jwt}}
