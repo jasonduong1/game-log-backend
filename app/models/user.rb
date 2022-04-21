@@ -4,4 +4,6 @@ class User < ApplicationRecord
   validates :user_name, presence: true, uniqueness: true
   validates :password, presence: true
   validates :name, presence: true
+
+  has_many :libraries
 end
