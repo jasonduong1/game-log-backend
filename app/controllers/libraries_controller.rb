@@ -1,11 +1,11 @@
 class LibrariesController < ApplicationController
   def index
-    libraries = Library.all
+    libraries = current_user.libraries
     render json: libraries
   end
 
   def show
-    library = Library.find_by(id: params[:id])
+    library = current_user.libraries.find_by(id: params[:id])
     render json: library
   end
 
@@ -25,7 +25,7 @@ class LibrariesController < ApplicationController
   end
 
   def update
-    library = Library.find_by(id: params[:id])
+    library = current_user.libraries.find_by(id: params[:id])
     library.game_id = params[:game_id] || library.game_id
     library.rating = params[:rating] || library.rating
     library.review = params[:review] || library.review
@@ -38,7 +38,7 @@ class LibrariesController < ApplicationController
   end
 
   def destroy
-    library = Library.find_by(id: params[:id])
+    library = current_user.libraries.find_by(id: params[:id])
     library.destroy
     render json: { message: "Game removed from library!" }
   end

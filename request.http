@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTA2NTgzOTN9.EQHUjE8GEol9rmn8vihEhpFxRdL3nKMcHrCKPlCIkVM
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTA3ODE3MDB9.P7ZAIxhkm83iw2UO_EDPWma0CmHj9vIe3vJYbY8tchU
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -21,8 +21,10 @@ Content-Type: application/json
 }
 ### Libraries index
 GET http://localhost:3000/libraries
+Authorization: Bearer {{jwt}}
 ### Libraries show
 GET http://localhost:3000/libraries/1
+Authorization: Bearer {{jwt}}
 
 ###Libraries create
 POST http://localhost:3000/libraries
@@ -30,19 +32,19 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "game_id": "13",
-  "rating": "9"
+  "game_id": "4000",
+  "rating": "4"
 }
 ### Libraries update
-PATCH http://localhost:3000/libraries/5
+PATCH http://localhost:3000/libraries/11
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
  "rating": "6"
 }
-### Posts destroy
-DELETE http://localhost:3000/libraries/5
+### Libraries destroy
+DELETE http://localhost:3000/libraries/11
 Authorization: Bearer {{jwt}}
 ### Games index
 GET http://localhost:3000/games
