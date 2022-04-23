@@ -6,5 +6,5 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   has_many :libraries
-  has_many :games, through :libraries
+  has_many :games, through: :libraries
 end
