@@ -1,6 +1,7 @@
 class LibrariesController < ApplicationController
   def index
     libraries = current_user.libraries
+    # libraries = Library.all #testing
     render json: libraries
   end
 
