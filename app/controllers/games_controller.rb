@@ -7,5 +7,9 @@ class GamesController < ApplicationController
   def show
     response = HTTP.get("https://api.rawg.io/api/games/#{params[:id]}?key=#{Rails.application.credentials.rawg.api_key}")
     render json: response.parse(:json)
+
+  def search
+    response = HTTP.get("https://api.rawg.io/api/games?key=#{Rails.application.credentials.rawg.api_key}&#{params[:search]}")
+    render json: response.parse(:json)
   end
 end
