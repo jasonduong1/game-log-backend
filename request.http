@@ -50,3 +50,10 @@ Authorization: Bearer {{jwt}}
 GET http://localhost:3000/games
 ### Games show
 GET http://localhost:3000/games/1
+### Games index tesing search
+GET http://localhost:3000/games
+Content-Type: application/json
+
+{
+  "search": "portal 2"
+}
