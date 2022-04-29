@@ -1,0 +1,19 @@
+current directory: /Users/jasonduong/Actualize/game-log-backend/vendor/bundle/ruby/3.0.0/gems/debug-1.5.0/ext/debug
+/Users/jasonduong/.rvm/rubies/ruby-3.0.3/bin/ruby -I /Users/jasonduong/.rvm/rubies/ruby-3.0.3/lib/ruby/3.0.0 -r ./siteconf20220429-67317-h6lyf7.rb extconf.rb
+checking for rb_iseq_parameters(NULL, 0) in VALUE rb_iseq_parameters(void *, int is_proc);... yes
+checking for rb_iseq_code_location(NULL, NULL, NULL, NULL, NULL) in void rb_iseq_code_location(void *, int *first_lineno, int *first_column, int *last_lineno, int *last_column);... yes
+checking for rb_iseq_type(NULL) in VALUE rb_iseq_type(void *);... no
+creating Makefile
+
+current directory: /Users/jasonduong/Actualize/game-log-backend/vendor/bundle/ruby/3.0.0/gems/debug-1.5.0/ext/debug
+make DESTDIR\= clean
+
+current directory: /Users/jasonduong/Actualize/game-log-backend/vendor/bundle/ruby/3.0.0/gems/debug-1.5.0/ext/debug
+make DESTDIR\=
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/jasonduong/Actualize/game-log-backend/vendor/bundle/ruby/3.0.0/gems/debug-1.5.0/ext/debug
+make DESTDIR\= install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 debug.bundle ./.gem.20220429-67317-cjx49v/debug
