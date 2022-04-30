@@ -17,6 +17,8 @@ class LibrariesController < ApplicationController
       rating: params[:rating],
       review: params[:review],
       note: params[:note],
+      title: params[:title],
+      image: params[:image],
     )
     if library.save
       render json: library

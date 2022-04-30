@@ -1,13 +1,13 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTEzMzc2NDF9.xNLb79ZtGC57cyvNcTRG5GnNN3Oc3eL4lrEfgdAGLD0
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTEzNjU0MjR9.oVLk8L_LmLvqOE8yLmUXydWGqh0u0Q6-OYVSn118tcQ
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "amanda",
-  "user_name": "useramanda",
-  "email": "amanda@test.com",
+  "name": "jason",
+  "user_name": "devjason",
+  "email": "jason@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -16,7 +16,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "amanda@test.com",
+  "email": "jason@test.com",
   "password": "password"
 }
 ### Libraries index
@@ -32,8 +32,12 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "game_id": "4000",
-  "rating": "4"
+  "game_id": "3498",
+  "rating": "10",
+  "review": "masterpiece",
+  "note": "story is amazing",
+  "title": "Grand Theft Auto V",
+  "image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg"
 }
 ### Libraries update
 PATCH http://localhost:3000/libraries/8
