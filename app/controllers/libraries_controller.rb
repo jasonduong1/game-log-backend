@@ -15,6 +15,7 @@ class LibrariesController < ApplicationController
       user_id: current_user.id,
       game_id: params[:game_id],
       rating: params[:rating],
+      progress: params[:progress],
       review: params[:review],
       note: params[:note],
       title: params[:title],
@@ -31,6 +32,7 @@ class LibrariesController < ApplicationController
     library = current_user.libraries.find_by(id: params[:id])
     library.game_id = params[:game_id] || library.game_id
     library.rating = params[:rating] || library.rating
+    library.progress = params[:progress] || library.progress
     library.review = params[:review] || library.review
     library.note = params[:note] || library.note
     if library.save
