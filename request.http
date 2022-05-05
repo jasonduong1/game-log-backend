@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTEzNjU0MjR9.oVLk8L_LmLvqOE8yLmUXydWGqh0u0Q6-OYVSn118tcQ
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE3OTA0NjB9.548imI6TqWq-KejRnxTO1eSUYzdwcOEUST3OMFGZHv8
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -33,9 +33,20 @@ Content-Type: application/json
 
 {
   "game_id": "3498",
-  "rating": "10",
-  "review": "masterpiece",
-  "note": "story is amazing",
+  "progress": "dropped",
+  "rating": "1",
+  "review": "yuck",
+  "note": "what even is this",
+  "title": "Grand Theft Auto V",
+  "image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg"
+}
+###Libraries create
+POST http://localhost:3000/libraries
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "game_id": "3498",
   "title": "Grand Theft Auto V",
   "image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg"
 }
