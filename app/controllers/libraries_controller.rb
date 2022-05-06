@@ -1,7 +1,11 @@
 class LibrariesController < ApplicationController
   def index
     libraries = current_user.libraries
-    # libraries = Library.all #testing
+
+    if params[:game_id]
+      libraries = current_user.libraries.find_by(game_id: params[:game_id])
+    end
+
     render json: libraries
   end
 

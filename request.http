@@ -1,5 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE3OTA0NjB9.548imI6TqWq-KejRnxTO1eSUYzdwcOEUST3OMFGZHv8
-
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE5NTIwODR9.dzTMBNU3XOJmal3fPtZImQ8Eu7J_l6vc87bcRD9zE-M
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
@@ -22,6 +21,14 @@ Content-Type: application/json
 ### Libraries index
 GET http://localhost:3000/libraries
 Authorization: Bearer {{jwt}}
+### Libraries index with game_id
+GET http://localhost:3000/libraries
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "game_id":4200
+}
 ### Libraries show
 GET http://localhost:3000/libraries/8
 Authorization: Bearer {{jwt}}
