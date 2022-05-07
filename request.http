@@ -30,7 +30,7 @@ Content-Type: application/json
   "game_id":4200
 }
 ### Libraries show
-GET http://localhost:3000/libraries/8
+GET http://localhost:3000/libraries/33
 Authorization: Bearer {{jwt}}
 
 ###Libraries create

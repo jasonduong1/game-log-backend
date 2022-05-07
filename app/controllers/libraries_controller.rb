@@ -6,12 +6,16 @@ class LibrariesController < ApplicationController
       libraries = current_user.libraries.find_by(game_id: params[:game_id])
     end
 
-    render json: libraries
+    if stale?(libraries)
+      render json: libraries
+    end
   end
 
   def show
     library = current_user.libraries.find_by(id: params[:id])
-    render json: library
+    if stale?(library)
+      render json: library
+    end
   end
 
   def create
